@@ -15,18 +15,18 @@ The data used for training the recommendation system filtered this raw data down
 
 ### a. Distribution of Ratings
 
-(../images/newplot.png)
-(../images/newplot1.png)
+![header](images/newplot.png)
+![header](images/newplot1.png)
 
 ### b. Distribution of Reviews per Business
 
-(../images/newplot2.png)
-(../images/newplot3.png)
+![header](images/newplot2.png)
+![header](images/newplot3.png)
 
 ### c. Distribution of Reviews per User
 
-(../images/newplot4.png)
-(../images/newplot5.png)
+![header](images/newplot4.png)
+![header](images/newplot5.png)
 
 
 ## 3. The Recommendation System
