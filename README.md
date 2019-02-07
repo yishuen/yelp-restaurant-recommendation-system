@@ -34,4 +34,4 @@ The data used for training the recommendation system filtered this raw data down
 The recommendation system is built on a Singular Value Decomposition model from [**surprise**](https://surprise.readthedocs.io/en/stable/index.html).
 
 * The base model (default hyperparameters) returned error metrics **RMSE = 1.0917 and MAE = 0.8587**, and took ~20 minutes to train with 5-fold validation
-* After tuning hyperparameters over several interations of GridSearch, final error metrics **RMSE = 1.0801 and MAE = 0.8514**, taking 34 seconds training on 80% of the full dataset and testing on the remaining 20%.
+* After tuning hyperparameters over several interations of GridSearch, final error metrics **RMSE = 1.0780 and MAE = 0.8495**, taking 48 seconds training on 80% of the full dataset and testing on the remaining 20%.
