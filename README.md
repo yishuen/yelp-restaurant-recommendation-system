@@ -35,3 +35,8 @@ The recommendation system is built on a Singular Value Decomposition model from 
 
 * The base model (default hyperparameters) returned error metrics **RMSE = 1.0917 and MAE = 0.8587**, and took ~20 minutes to train with 5-fold validation
 * After tuning hyperparameters over several interations of GridSearch, final error metrics **RMSE = 1.0780 and MAE = 0.8495**, taking 48 seconds training on 80% of the full dataset and testing on the remaining 20%.
+
+#### Version 1 (02/07/2019):
+Pick a user, the app shows the reviews the user's already made, and makes the same number of recommendations with Google Maps links to the recommended restaurants.
+
+![header](images/recsystem1.png)

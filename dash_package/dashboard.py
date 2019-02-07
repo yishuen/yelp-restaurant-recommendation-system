@@ -56,7 +56,7 @@ def get_n_preds(uid, n):
         pred = model.predict(str(uid), str(i))
         ratings.append((int(pred.iid), pred.est))
     ratingsdesc = sorted(ratings, reverse=True, key=lambda x: x[1])[:n]
-    namedratings = [(get_info(r[0])['name'], r[1]) for r in ratingsdesc]
+    namedratings = [(get_info(r[0])['name'], r[1], get_info(r[0])['latitude'], get_info(r[0])['longitude']) for r in ratingsdesc]
     return namedratings
 
 
@@ -143,7 +143,8 @@ def update_userid(value):
     n = len(reviews)
     recs = get_n_preds(value, n)
     htmls = [html.H6(reviews[i][0]+': '+reviews[i][1]) for i in range(n)]
-    preds = [html.H6(recs[i][0]+': '+str(recs[i][1])) for i in range(n)]
+    urls = ['http://www.google.com/maps/place/'+str(recs[i][2])+','+str(recs[i][3]) for i in range(n)]
+    preds = [html.H6([recs[i][0]+': '+str(round(recs[i][1],2))+' ', html.A('(map)', href=urls[i])]) for i in range(n)]
     return html.Div(style={'textAlign': 'center','color': colors['text']}, children=[
     html.Div([
         html.Div(children=[
